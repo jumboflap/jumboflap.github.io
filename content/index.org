@@ -1,6 +1,70 @@
 #+title: Index
 #+author: Himanshu Singh
 #+date: 2021-10-12
-* This is a top level heading
-** This is a second level heading
+
 Link to [[./Emacs.org][Davids' Emacs configuration]]
+* Introduction to computing
+The OS (Operating System) has two ways of interaction:
+1. Graphical User Interface (GUI): Everyone starts learning this model of interaction and it is perfectly fine for simple tasks
+2. The shell (terminal app in MacOS): This is the where you can really tap into the power of the the OS.
+** Directory Structure
+
+|          Path           |                    Description                     |
+|-------------------------+----------------------------------------------------|
+| =/=                     |The root directory                                  |
+|                         |                                                    |
+|-------------------------+----------------------------------------------------|
+| =/Users=                |Contains all home directories of users on the system|
+|                         |                                                    |
+|-------------------------+----------------------------------------------------|
+| =/Users/<current_user>= |The home directory of the =<current_user>= .        |
+|                         |Shortcut (alias) is =~/=                            |
+|-------------------------+----------------------------------------------------|
+
+** Basic shell commands
+To find out more about a command you can type =man <command_name>= in the shell.
+*** List contents of directory
+
+| Command   | Description                                         |
+|-----------+-----------------------------------------------------|
+| =ls=      | List directory contents                             |
+| =ls -ltr= | List directory contents ordered recursively by time |
+| =ls -la=  | List all contents in the directory                  |
+|           |                                                     |
+
+*** Change directory
+
+| Command | Description                                  |
+|---------+----------------------------------------------|
+| =pwd=   | print working (current) directory            |
+| =cd ..= | change to one level up (parent) directory    |
+| =cd /=  | change to root directory                     |
+| =cd=    | change to =<current_user>='s home directory. |
+| =cd ~=  | change to =<current_user>='s home directory. |
+| =cd ~/= | change to =<current_user>='s home directory. |
+|         |                                              |
+
+*** Create (directory and file)
+**** Directory
+
+| Command                  | Description                                                           |
+|--------------------------+-----------------------------------------------------------------------|
+| =mkdir <directory_name>= | Create a directory called =<directory_name>= in the current directory |
+
+**** File
+
+| Command             | Description                                                        |
+|---------------------+--------------------------------------------------------------------|
+| =touch <file_name>= | Create an empty file called =<file_name>= in the current directory |
+
+*** Delete (directory and file)
+**** directory
+
+| Command                  | Description                                                               |
+|--------------------------+---------------------------------------------------------------------------|
+| =rmdir <directory_name>= | Remove (Delete) an (empty) directory called =<directory_name>=            |
+|                          | which exists in the current directory                                     |
+| =rm <directory_name>=    | Remove (Delete) a directory called =<directory_name>= and all files in it |
+* Shell tutorial
+https://swcarpentry.github.io/shell-novice/
+https://carpentries-incubator.github.io/shell-extras/
