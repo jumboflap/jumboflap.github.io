@@ -16,25 +16,307 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org59b78eb">This is a top level heading</a>
+<li><a href="#orga34ba32">Introduction to computing</a>
 <ul>
-<li><a href="#org5ffa44a">This is a second level heading</a></li>
+<li><a href="#org3b2860a">Directory Structure</a></li>
+<li><a href="#orgbd14780">Basic shell commands</a>
+<ul>
+<li><a href="#org86011d0">List contents of directory</a></li>
+<li><a href="#org7e3c1a5">Change directory</a></li>
+<li><a href="#org45e38a7">Create (directory and file)</a></li>
+<li><a href="#org6832c27">Delete (directory and file)</a></li>
 </ul>
+</li>
+</ul>
+</li>
+<li><a href="#org798ec99">Shell tutorial</a></li>
+</ul>
+</div>
+</div>
+<p>
+Link to <a href="./Emacs.html">Davids' Emacs configuration</a>
+</p>
+<div id="outline-container-orga34ba32" class="outline-2">
+<h2 id="orga34ba32">Introduction to computing</h2>
+<div class="outline-text-2" id="text-orga34ba32">
+<p>
+The OS (Operating System) has two ways of interaction:
+</p>
+<ol class="org-ol">
+<li>Graphical User Interface (GUI): Everyone starts learning this model of interaction and it is perfectly fine for simple tasks</li>
+<li>The shell (terminal app in MacOS): This is the where you can really tap into the power of the the OS.</li>
+</ol>
+</div>
+<div id="outline-container-org3b2860a" class="outline-3">
+<h3 id="org3b2860a">Directory Structure</h3>
+<div class="outline-text-3" id="text-org3b2860a">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Path</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>/</code></td>
+<td class="org-left">The root directory</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><code>/Users</code></td>
+<td class="org-left">Contains all home directories of users on the system</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><code>/Users/&lt;current_user&gt;</code></td>
+<td class="org-left">The home directory of the <code>&lt;current_user&gt;</code> .</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Shortcut (alias) is <code>~/</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgbd14780" class="outline-3">
+<h3 id="orgbd14780">Basic shell commands</h3>
+<div class="outline-text-3" id="text-orgbd14780">
+<p>
+To find out more about a command you can type <code>man &lt;command_name&gt;</code> in the shell.
+</p>
+</div>
+<div id="outline-container-org86011d0" class="outline-4">
+<h4 id="org86011d0">List contents of directory</h4>
+<div class="outline-text-4" id="text-org86011d0">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>ls</code></td>
+<td class="org-left">List directory contents</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ls -ltr</code></td>
+<td class="org-left">List directory contents ordered recursively by time</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ls -la</code></td>
+<td class="org-left">List all contents in the directory</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org7e3c1a5" class="outline-4">
+<h4 id="org7e3c1a5">Change directory</h4>
+<div class="outline-text-4" id="text-org7e3c1a5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>pwd</code></td>
+<td class="org-left">print working (current) directory</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>cd ..</code></td>
+<td class="org-left">change to one level up (parent) directory</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>cd /</code></td>
+<td class="org-left">change to root directory</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>cd</code></td>
+<td class="org-left">change to <code>&lt;current_user&gt;</code>'s home directory.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>cd ~</code></td>
+<td class="org-left">change to <code>&lt;current_user&gt;</code>'s home directory.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>cd ~/</code></td>
+<td class="org-left">change to <code>&lt;current_user&gt;</code>'s home directory.</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org45e38a7" class="outline-4">
+<h4 id="org45e38a7">Create (directory and file)</h4>
+<div class="outline-text-4" id="text-org45e38a7">
+</div>
+<ul class="org-ul">
+<li><a id="orgda5bc51"></a>Directory<br />
+<div class="outline-text-5" id="text-orgda5bc51">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>mkdir &lt;directory_name&gt;</code></td>
+<td class="org-left">Create a directory called <code>&lt;directory_name&gt;</code> in the current directory</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+
+<li><a id="orgfea0afe"></a>File<br />
+<div class="outline-text-5" id="text-orgfea0afe">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>touch &lt;file_name&gt;</code></td>
+<td class="org-left">Create an empty file called <code>&lt;file_name&gt;</code> in the current directory</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-org6832c27" class="outline-4">
+<h4 id="org6832c27">Delete (directory and file)</h4>
+<div class="outline-text-4" id="text-org6832c27">
+</div>
+<ul class="org-ul">
+<li><a id="org15e927d"></a>directory<br />
+<div class="outline-text-5" id="text-org15e927d">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>rmdir &lt;directory_name&gt;</code></td>
+<td class="org-left">Remove (Delete) an (empty) directory called <code>&lt;directory_name&gt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">which exists in the current directory</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>rm &lt;directory_name&gt;</code></td>
+<td class="org-left">Remove (Delete) a directory called <code>&lt;directory_name&gt;</code> and all files in it</td>
+</tr>
+</tbody>
+</table>
+</div>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org59b78eb" class="outline-2">
-<h2 id="org59b78eb">This is a top level heading</h2>
-<div class="outline-text-2" id="text-org59b78eb">
 </div>
-<div id="outline-container-org5ffa44a" class="outline-3">
-<h3 id="org5ffa44a">This is a second level heading</h3>
-<div class="outline-text-3" id="text-org5ffa44a">
+<div id="outline-container-org798ec99" class="outline-2">
+<h2 id="org798ec99">Shell tutorial</h2>
+<div class="outline-text-2" id="text-org798ec99">
 <p>
-Link to <a href="./Emacs.html">Davids' Emacs configuration</a>
+<a href="https://swcarpentry.github.io/shell-novice/">https://swcarpentry.github.io/shell-novice/</a>
+<a href="https://carpentries-incubator.github.io/shell-extras/">https://carpentries-incubator.github.io/shell-extras/</a>
 </p>
-</div>
 </div>
 </div>
 </div>
