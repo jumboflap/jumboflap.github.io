@@ -1,0 +1,6 @@
+#+title: Index
+#+author: Himanshu Singh
+#+date: 2021-10-12
+* This is a top level heading
+** This is a second level heading
+Link to [[./Emacs.org][Davids' Emacs configuration]]
